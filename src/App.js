@@ -1,7 +1,7 @@
 import './App.css';
 import styled from 'styled-components'
 
-
+import { Home, SingleProduct, Cart, Checkout, Error, About,Products,PrivateRoute } from './pages';
 
 const Button = styled.button`
 background: green;
