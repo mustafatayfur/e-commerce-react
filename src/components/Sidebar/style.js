@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const SidebarContainer = styled.div`
+export const SidebarContainer = styled.div`
 text-align: center;
 .sidebar-header {
   display: flex;

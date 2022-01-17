@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 
 
-const NavContainer = styled.nav`
+export const NavContainer = styled.nav`
   height: 5rem;
   display: flex;
   align-items: center;

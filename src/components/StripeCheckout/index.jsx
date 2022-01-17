@@ -18,9 +18,9 @@ const CheckoutForm = () => {
 
 const StripeCheckout = () => {
   return (
-    <Wrapper>
+    <>
       <CheckoutForm />
-    </Wrapper>
+    </>
   )
 }
 

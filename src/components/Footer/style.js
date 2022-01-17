@@ -2,7 +2,7 @@
 import styled from 'styled-components'
 
 
-const Wrapper = styled.footer`
+export const Wrapper = styled.footer`
 height: 5rem;
 display: flex;
 flex-direction: column;
