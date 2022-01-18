@@ -27,6 +27,8 @@ if(action.type === SIDEBAR_CLOSE){
       products: action.payload, 
       featured_products
     }
+  }if(action.type === GET_SINGLE_PRODUCT_ERROR){
+    return{...state, products_loading: false, products_error: true}
   }
   throw new Error(`No Matching "${action.type}" - action type`)
 }
