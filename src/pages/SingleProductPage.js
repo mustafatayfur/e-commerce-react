@@ -15,14 +15,14 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 const SingleProductPage = () => {
   // console.log(useParams);
-  const { id } = useParams;
+  const { id } = useParams();
   const history = useHistory();
   const {
     single_product_loading: loading,
     single_product_error: error,
     single_product: product,
     fetchSingleProduct,
-  } = useProductsContext;
+  } = useProductsContext();
   useEffect(() => {
     fetchSingleProduct(`${url}${id}`);
   }, [id]);
@@ -37,7 +37,7 @@ const SingleProductPage = () => {
     return <Loading />;
   }
   if (error) {
-    return <Error />;
+    return <Error/>
   }
   const {
     name,
