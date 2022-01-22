@@ -29,13 +29,11 @@ function App() {
         <Route exact path="/products">
           <Products />
         </Route>
-        <Route exact path="/products/:id" children={<SingleProduct />}>
-          <Products />
-        </Route>
+        <Route exact path="/products/:id" children={<SingleProduct/>} />
         <Route exact path="/checkout">
           <Checkout />
         </Route>
-        <Route exact path="*">
+        <Route path="*">
           <Error />
         </Route>
       </Switch>
