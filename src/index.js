@@ -10,5 +10,8 @@ import { Auth0Provider } from '@auth0/auth0-react'
 
 ReactDOM.render(
     <ProductsProvider>
-    <App />
-    </ProductsProvider>, document.getElementById('root'))
+        <FilterProvider>
+            <App />
+        </FilterProvider>
+    </ProductsProvider>, 
+    document.getElementById('root'))
