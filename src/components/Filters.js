@@ -14,6 +14,10 @@ const Filters = () => {
     all_products,
   } = useFilterContext()
 
+  const categories = getUniqueValues(all_products, 'category')
+  const companies = getUniqueValues(all_products, 'company')
+  const colors = getUniqueValues(all_products, 'colors')
+
   return (
     <Wrapper>
         <div className="content">
@@ -22,7 +26,14 @@ const Filters = () => {
                 <div className="form-control">
                     <input type="text" name='text' placeholder='search' className='search-input' value={text} onChange={updateFilters}/>
                 </div>
-                {/*en search input */}
+                {/*end search input */}
+                {/*categories */}
+                <div className="form-control">
+                    <h5>category</h5>
+                    <div>
+                       {} 
+                    </div>
+                </div>
             </form>
         </div>
     </Wrapper>
