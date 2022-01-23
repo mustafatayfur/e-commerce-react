@@ -74,9 +74,10 @@ const Filters = () => {
                           if(c === 'all'){
                             return (
                               <button
+                                  key={index}
                                   name='color'
                                   onClick={updateFilters}
-                                  data-colors='all'
+                                  data-color='all'
                                   className={`${
                                     color === 'all' ? 'all-btn active' : 'all-btn'
                                   }`}
