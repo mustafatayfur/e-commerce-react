@@ -35,19 +35,30 @@ const filter_reducer = (state, action) => {
     }
   }
   if(action.type === SORT_PRODUCTS){
+
     const {sort, filtered_products} = state;
-    let tempProducts = [];
-    if(sort = 'price-lowest'){
-      console.log('price-lowest')
+    let tempProducts = [...filtered_products];
+
+    if(sort === 'price-lowest'){
+      tempProducts= tempProducts.sort((a,b)=> a.price - b.price)
     }
-    if(sort = 'price-highest'){
-      console.log('price-highest')
+    if(sort === 'price-highest'){
+      tempProducts= tempProducts.sort((a,b)=> b.price - a.price)
     }
-    if(sort = 'name-a'){
-      console.log('name-a')
+    if(sort === 'name-a'){
+      tempProducts= tempProducts.sort((a,b)=> {
+        return(
+          a.name.localeCompare(b.name)
+        )
+      })
+
     }
-    if(sort = 'name-z'){
-      console.log('name-z')
+    if(sort === 'name-z'){
+      tempProducts= tempProducts.sort((a,b)=> {
+        return(
+          b.name.localeCompare(a.name)
+        )
+      })
     }
     return{
       ...state,
