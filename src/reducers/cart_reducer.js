@@ -61,9 +61,7 @@ if(action.type === TOGGLE_CART_ITEM_AMOUNT){
             }
             return {...item, amount: newAmount}
             }
-      } else {
-        return item
-      }
+      } return item
       
   })
   return {...state, cart: tempCart}
