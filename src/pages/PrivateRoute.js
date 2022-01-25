@@ -13,8 +13,7 @@ const PrivateRoute = ({children, ...rest}) => {
         render={()=> {
           return myUser ? children : <Redirect to= '/'></Redirect>
         }}
-    >
-    </Route>
+    ></Route>
   )
 };
 export default PrivateRoute;
